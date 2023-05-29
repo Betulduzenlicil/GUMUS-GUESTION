@@ -366,13 +366,24 @@ console.log("ANSWER THESE QUESTIONS")
 
 //* ÖRNEK:19 Kullanıcıdan 0- ile 100 arasında bir not isteyen ve girilen not 0- 100 den farklı ise kullanıcıyı uyararak yeniden 0-100 arasında not girmeye zorlayınız while döngüsü
 
-
-let number = +prompt(" Enter your note")
-while (number <0 || number>100) {
-   number = +prompt(" Enter your note")
+//? 1. yol WHILE ile
+// let number = +prompt(" Enter your note")
+// while (number <0 || number>100) {
+//    number = +prompt(" Enter your note")
    
-}
-console.log(number)
+// }
+// console.log(number)
+
+//? 2. yol  DO WHILE ile
+// let number;
+// do{
+//    number = +prompt(" Enter your note") 
+// }while (number <0 || number>100) {
+//    console.log(number)
+   
+// }
+
+
 
 
 
