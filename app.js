@@ -404,8 +404,8 @@ console.log("ANSWER THESE QUESTIONS")
 
 // console.log("-------------------------------");
 
-// //? ID Password Control
-// * Normalde siteler id ve parolayı aynı anda kontrol eder. Biz bu örnekte ayrı ayrı kontrol ediyoruz. amacımız login check örneği üzerinden iç içe döngüleri anlamak. 
+//*ÖRNEK:21 ID Password Control
+// ? Normalde siteler id ve parolayı aynı anda kontrol eder. Biz bu örnekte ayrı ayrı kontrol ediyoruz. amacımız login check örneği üzerinden iç içe döngüleri anlamak. 
 
 // * Normal sitelerin kontrol kodu aşağıdaki gibidir.
 // if (kontrolIsim == isim && kontrolNumara == numara) {
@@ -416,7 +416,7 @@ console.log("ANSWER THESE QUESTIONS")
 
 
 
-// //* Login Check - önce id kontrolü yapılacak. eğer id doğru ise parola kontrolü yapılacak. toplamda 3 hata hakkı var.
+//* ÖRNEK:22 Login Check - önce id kontrolü yapılacak. eğer id doğru ise parola kontrolü yapılacak. toplamda 3 hata hakkı var.
 
 // const isim = "gumus";
 // const numara = 1669;
@@ -494,6 +494,174 @@ console.log("ANSWER THESE QUESTIONS")
 //             }
 //     }
 // }
+
+//*ÖRNEK:23 Girilen sayının negatif veya pozitif olup olmadığını bulunuz
+
+//? 1. yol
+// const result = ()=>{
+//    let number = +prompt("enter your number")
+//    if (number>0) {
+//       console.log("pozitive");
+//    }else if(number <0){
+//       console.log("negative");
+
+//    }else{
+//       console.log("zero");
+//    }
+// }
+// result  ()
+
+//? 2.yol
+
+// const result = ()=>{
+//    let number =Math.floor(Math.random()*100-50)
+//    if (number>0) {
+//       console.log("pozitive");
+//    }else if(number <0){
+//       console.log("negative");
+
+//    }else{
+//       console.log("zero");
+//    }
+// }
+// result  ()
+
+//? 3.yol
+
+// const positiveOrNegative = (number) =>{
+//     const number = +prompt("Please enter a number")
+//     if (number > 0) {
+//         console.log("Positive");
+//     } else if (number < 0) {
+//         console.log("Negative");
+//     } else {
+//         console.log("Zero");
+//     }
+// }
+// positiveOrNegative(1)
+
+
+//* ÖRNEK:24 gİRİLEN SAYININ TEK Mİ ÇİFT Mİ OLDUĞUNU BULUNUZ
+
+// const oddOrEven = ()=>{
+//    const number =+prompt("Enter number")
+//    if (number%2==0) {
+//       console.log("Even")
+      
+//    }else{
+//       console.log("Odd")
+//    }
+// }
+// oddOrEven()
+
+
+
+//* ÖRNEK:25 Girilen sayının haftanın hangi günü olduğunu bulunuz
+
+
+// const dayOfWeek = ()=>{
+//    const day =+prompt("Enter number")
+   
+// if (day==0) {
+//     console.log(`${day}: Sunday`);
+    
+// }else if (day ==1) {
+    
+//     console.log(`${day}: Monday`);
+// }else if (day ==2) {
+    
+//     console.log(`${day}: Tuesday`);
+// }else if (day ==3) {
+    
+//     console.log(`${day}: Wednesday`);
+// }else if (day ==4) {
+    
+//     console.log(`${day}: Thursday`);
+// }else if (day ==5) {
+    
+//     console.log(`${day}: Friday`);
+// }else if (day ==6) {
+    
+//     console.log(`${day}: Saturday`);
+// }else{
+//     console.log("Geçersiz değer");
+// }
+
+// }
+
+// dayOfWeek()
+
+
+//* Örnek:26 Login = Kullanıcı id ve şifre kontrolü
+//?Girilen bilgilere göre girişin başarılı olup olmadığını döndürür
+
+// const loginCheck = function (id, password) {
+//     let userID = 123123;
+//     let userPassword = 123123;
+
+//     if (userID == id && userPassword == password) {
+//         console.log("Login succesfull");
+//     } else {
+//         console.log("Login failed");
+//     }
+// }
+// loginCheck(123123,123123)
+
+
+//* Örnek:27  1'den n'ye kadar olan sayıların toplamını hesaplama
+//? Kullanıcının girdiği sayıya göre toplamını hesaplar
+
+//     const total = function(number){
+//         let sum = 0;
+//         for (let i = 1; i <= number; i++) {
+//             sum = sum + i;
+//         }
+//         console.log(sum);
+//     }
+// total(10)
+
+
+//* Örnek:28 => Kullanicidan aldığı parametreler arasındaki 13 e bölümünden kalanı 3 olan sayıları yazdırma
+
+//? Kullanıcının girdiği sayıya göre sonuc döndürür
+
+// const numbers = function(parametre1,parametre2){
+//     let sayac = 0;
+//     let array = [];
+//     for (let i = parametre1; i < parametre2; i++) {
+//         if (i % 13 == 3) {
+//             array.push(i)
+//             console.log(array);
+//             sayac++;
+//         }
+//     }
+//     console.log(sayac);
+// }
+// numbers(100,150)
+
+
+
+//* Örnek:29 Aşagıdaki çıktıyı konsola yazdırma
+//? ilk for kaç basamak olacağını, içerideki for kaç satır olacağını belirliyor
+
+// * * * * *
+// * * * * *
+// * * * * *
+// * * * * *
+// * * * * *
+    // const figure = (column, row) =>{
+    //     for (let i = 1; i <= column; i++) {
+    //         for (let j = 1; j <= row; j++) {
+    //             console.log(" * ");
+    //             document.getElementById("ilk").innerHTML += "* ";
+    //         }
+    //         console.log(`\n`);
+    //         document.getElementById("ilk").innerHTML += "<br>";
+    //     }
+    // }
+    // figure(5,5)
+
+
 
 
 
