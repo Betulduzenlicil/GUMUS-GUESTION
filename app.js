@@ -385,6 +385,115 @@ console.log("ANSWER THESE QUESTIONS")
 
 
 
+//* ÖRNEK20: kULLANOCI Q VEYA q girene kadar yazdığı sayıları topla ve ortalamasını bul
+
+  // let total = 0; // Kullanıcının girdiği sayıların toplamı
+// let count = 0; // Ortalamayı almak için kaç tane toplama yaptığımızı öğrenmek için sayaç
+// let avarage = 0; // Ortalama
+
+// do {
+//     number = prompt("Please enter the number")
+//     if (number ==  "q" || number == "Q") {
+//     }else{
+//         total += +(number)
+//         count++;
+//     }
+// } while ((number !=  "q" && number != "Q"));
+// avarage = total / count;
+// console.log(avarage);
+
+// console.log("-------------------------------");
+
+// //? ID Password Control
+// * Normalde siteler id ve parolayı aynı anda kontrol eder. Biz bu örnekte ayrı ayrı kontrol ediyoruz. amacımız login check örneği üzerinden iç içe döngüleri anlamak. 
+
+// * Normal sitelerin kontrol kodu aşağıdaki gibidir.
+// if (kontrolIsim == isim && kontrolNumara == numara) {
+//     console.log("giris basarili");
+// }else{
+//     hak--
+// }
 
 
-  
+
+// //* Login Check - önce id kontrolü yapılacak. eğer id doğru ise parola kontrolü yapılacak. toplamda 3 hata hakkı var.
+
+// const isim = "gumus";
+// const numara = 1669;
+// let hak = 3;
+// let flag = true;
+// let kontrolIsim;
+// let kontrolNumara;
+
+// while (flag) {
+//     if (hak <= 0) {
+//         console.log("Hakkiniz kalmadi");
+//         flag = false
+//         break;
+//     }else{
+//         kontrolIsim = prompt(`ismini giriniz. ${hak} hata hakkiniz kaldi`);
+//         if (hak <= 0) {
+//             console.log("Hakkiniz kalmadi");
+//             break;
+//         }
+//         if (kontrolIsim != isim) {
+//             hak--;
+//             console.log(`${hak} hakkiniz kaldi`);
+//         }else{
+//             while (flag) {
+//                 if (hak <= 0) {
+//                     console.log("Hakkiniz kalmadi");
+//                     flag = false
+//                     break;
+//                 }else if (kontrolNumara != numara) {
+//                 kontrolNumara = +prompt(`numaranizi giriniz. ${hak} hata hakkiniz kaldi`);
+//                     hak--;
+//                     console.log(`numaranizi hatali girdiniz.  ${hak} hata hakkiniz kaldi`);
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// if (isim == kontrolIsim && numara == kontrolNumara) {
+//     console.log("tebrikler. giriş yapabilirsiniz");
+// }
+
+
+// * Alternatif Çözüm
+
+// let kullaniciID = "gumus";
+// let kullaniciParola = "123"
+// let hak = 3;
+// let id;
+// let parola;
+
+// do {
+//     id = prompt("id")
+//     if (kullaniciID != id) {
+//     hak--;
+//     }
+//     if (hak==0) {
+//         console.log("hakkiniz kalmadi");
+//         break
+//     }
+// } while (kullaniciID != id);
+
+
+// while (hak>0) {
+//     parola = prompt("parola")
+//     if (hak==0) {
+//         console.log("hakkiniz kalmadi");
+//         break
+//     }else{
+//         if (kullaniciParola==parola) {
+//             console.log("sisteme giris yaptiniz");
+//             break
+//         }else{
+//             hak--;
+//             }
+//     }
+// }
+
+
+
