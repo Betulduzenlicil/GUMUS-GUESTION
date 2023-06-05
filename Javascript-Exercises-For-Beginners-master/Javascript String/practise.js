@@ -103,48 +103,76 @@
 
 const sentence = "hello world!";
 
-// const newSentece = sentence.split("").reverse().join("")
-// console.log(newSentece);
+const newSentece = sentence.split("").reverse().join("")
+console.log(newSentece);
 
-// console.log("*************");
+console.log("*************");
 
 //? Örnek 2 => Tüm kelimelerin baş harfini büyük harfe çevirme
 
-// const sentence2 = "tüm kelimelerin bas harfini buyuge ceviren kod";
+const sentence2 = "tüm kelimelerin bas harfini buyuge ceviren kod";
 
-// const words = sentence2.split(" ");
-// let newSentence2 = "";
-// let newSentence3 = "";
+const words = sentence2.split(" ");
+let newSentence2 = "";
+let newSentence3 = "";
 
+for (let i = 0; i < words.length; i++) {
+    newSentence2 += words[i][0].toUpperCase() + words[i].slice(1) + (" ");
+}
+console.log(newSentence2);
 
-// for (let i = 0; i < words.length; i++) {
-//     newSentence2 += words[i][0].toUpperCase() + words[i].slice(1) + (" ");
-// }
-// console.log(newSentence2);
+// //? Forof ile alternatif çözüm
 
-// // //? Forof ile alternatif çözüm
-
-// for (let i of words) {
-//     newSentence3 += i[0].toUpperCase() + i.slice(1) + " ";
-// }
-// console.log(newSentence3);
+for (let i of words) {
+    newSentence3 += i[0].toUpperCase() + i.slice(1) + " ";
+}
+console.log(newSentence3);
 
 //? Örnek 3 => Verilen bir cümledeki kelime sayısını bulan bir fonksiyon yazın.
 
-// const sentence3 = "kac kelime oldugunu hesaplayan fonksiyon yazalim";
+const sentence3 = "kac kelime oldugunu hesaplayan fonksiyon yazalim";
 
-// function howManyWords(){
-//     const words = sentence3.split(" ").length;
-//     console.log(words);
-// }
-// howManyWords();
+function howManyWords(){
+    const words = sentence3.split(" ").length;
+    console.log(words);
+}
+howManyWords();
 
 //? Örnek 4 => cümle içerisinde tekrarlanan kelimeleri bulma
 
-const sentence4 = "bu cumlede tekrar eden kelimeleri bulalim bu tekrar onemli"
-const words = sentence4.split(" ");
-const array = [words[0]];
+const cumle = "bu bir örnek örnek cümle cümle cümle örnek";
+const kelimeler = cumle.split(" ");
+const tekrarlayanKelimeler = [];
 
-for (const i of words) {
-    
+for (let i = 0; i < kelimeler.length; i++) {
+
+    if (
+        kelimeler.indexOf(kelimeler[i]) !== i  &&
+        !tekrarlayanKelimeler.includes(kelimeler[i])
+    ) {
+        tekrarlayanKelimeler.push(kelimeler[i]);
+    }
 }
+
+console.log("Tekrarlayan kelimeler:", tekrarlayanKelimeler);
+
+//? Örnek 5 => Verilen bir cümledeki her kelimenin uzunluğunu hesaplayan ve en uzun kelimeyi ve  uzunluğunu döndüren bir fonksiyon yazın.
+
+function find(sentence5) {
+    sentence5 = "bu cumlede tekrar eden kelimeleri bulalim bu tekrar onemli";
+    let words = sentence5.split(" ");
+    let longestWord = "";
+    let longestLength = 0;
+
+    for (let i = 0; i < words.length; i++) {
+        if (words[i].length > longestLength) {
+            longestLength = words[i].length;
+            longestWord = words[i];
+        }
+    }
+    return console.log(
+        `Longest word is "${longestWord}". Longest word's lenght is ${longestLength}`
+    );
+}
+
+find();
