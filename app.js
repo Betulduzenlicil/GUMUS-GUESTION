@@ -663,5 +663,13 @@ console.log("ANSWER THESE QUESTIONS")
 
 
 
+//* Örnek:2 
+const str1= "Merhaba"
+console.log(str1.charAt(0)) //"M"
 
+//* öRNEK:
+const str2= "merhaba"
+const str3= "dünya"
+const result = str2.concat(" ", str3)
+console.log(result) //merhaba dünya
 
